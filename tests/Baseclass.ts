@@ -1,18 +1,33 @@
-import {Page} from '@playwright/test';
+import { Locator, Page } from "@playwright/test";
 
-export class Baseclass{
-    protected page:Page;
+export class BasePage {
 
-    constructor(page:Page){
-        this.page=page;
-    }
+    constructor(protected page: Page) { }
 
-    async BaseURL(url:string){
+    async navigate(url: string) {
         await this.page.goto(url);
     }
 
-    async waitforload(){
-        await this.page.waitForLoadState('load');
+    async click(locator: Locator) {
+        await locator.click();
+    }
+
+    async fill(locator: Locator, value: string) {
+        await locator.fill(value);
+    }
+
+    async selectByText(locator: Locator, text: string) {
+        await locator.selectOption({ label: text });
+    }
+
+    async waitForPageLoad() {
+        await this.page.waitForLoadState('networkidle');
+    }
+
+    async takeScreenshot(path: string) {
+        await this.page.screenshot({
+            path,
+            fullPage: true
+        });
     }
 }
- // new change
