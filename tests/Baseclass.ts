@@ -15,3 +15,4 @@ export class Baseclass{
         await this.page.waitForLoadState('load');
     }
 }
+ // new change
