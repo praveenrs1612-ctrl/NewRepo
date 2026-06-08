@@ -1,0 +1,23 @@
+{
+  "name": "newrepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenrs1612-ctrl/NewRepo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/praveenrs1612-ctrl/NewRepo/issues"
+  },
+  "homepage": "https://github.com/praveenrs1612-ctrl/NewRepo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.2"
+  }
+}
